@@ -6,17 +6,14 @@
 //
 
 import Foundation
-
 import UtilityPackage
 
 enum ProductAPIRequest: APIRequestProtocol {
     case getAll
     case create
 
-    
-    var header: [String : String]? {
+    var header: [String: String]? {
         let header = ["Content-type": "application/json"]
-        
         switch self {
         case .getAll:
             return header
@@ -24,8 +21,7 @@ enum ProductAPIRequest: APIRequestProtocol {
             return header
         }
     }
-    
-    var queryParams: [String : Any]? {
+    var queryParams: [String: Any]? {
         switch self {
         case .getAll:
             return nil
@@ -33,8 +29,6 @@ enum ProductAPIRequest: APIRequestProtocol {
             return nil
         }
     }
-    
-    
     var baseURL: String {
         switch self {
         case .getAll:
@@ -43,7 +37,6 @@ enum ProductAPIRequest: APIRequestProtocol {
             return "https://api.escuelajs.co"
         }
     }
-    
     var path: String {
         switch self {
         case .getAll:
@@ -52,7 +45,6 @@ enum ProductAPIRequest: APIRequestProtocol {
             return "/api/v1/products"
         }
     }
-    
     var method: HTTPMethod {
         switch self {
         case .getAll:
@@ -61,6 +53,4 @@ enum ProductAPIRequest: APIRequestProtocol {
             return .POST
         }
     }
-    
-    
 }

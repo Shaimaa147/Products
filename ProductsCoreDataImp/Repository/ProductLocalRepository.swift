@@ -6,17 +6,14 @@
 //
 
 import Foundation
-protocol ProductLocalRepositoryProtocol{
-    func saveProduct(_product: ProductModel) throws -> Void
+protocol ProductLocalRepositoryProtocol {
+    func saveProduct(product: ProductModel) throws
     //    func createProduct(product: ProductModel) -> ProductResponse
 }
 
 class ProductLocalRepository: ProductLocalRepositoryProtocol {
-    
     var dataSource: ProductLocalDataSource = ProductLocalDataSourceImplementation()
-    
-    func saveProduct(_product: ProductModel) throws -> Void {
-        _ =  try  dataSource.saveProduct(product: _product)
-        
+    func saveProduct(product: ProductModel) throws {
+       try  dataSource.saveProduct(product: product)
     }
 }

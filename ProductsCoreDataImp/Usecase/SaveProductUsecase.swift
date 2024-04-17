@@ -7,10 +7,8 @@
 
 import Foundation
 class SaveProductUseCase {
-    
     var repo: ProductLocalRepositoryProtocol = ProductLocalRepository()
-    
-    func execute(_product: ProductModel) throws -> Void {
-            try repo.saveProduct(_product: _product)
+    func execute(product: ProductModel) throws {
+            try repo.saveProduct(product: product)
     }
 }

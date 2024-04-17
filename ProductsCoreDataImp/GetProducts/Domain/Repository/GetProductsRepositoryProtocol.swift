@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol GetProductsRepositoryProtocol {
+    func getAllProducts() async throws -> [ProductModel]
+}

@@ -6,15 +6,13 @@
 //
 
 import Foundation
-protocol ProductRemoteRepositoryProtocol{
+protocol ProductRemoteRepositoryProtocol {
     func getAllProducts() async throws -> [ProductModel]
     //    func createProduct(product: ProductModel) -> ProductResponse
 }
 
 class ProductRemoteRepository: ProductRemoteRepositoryProtocol {
-    
     var dataSource: ProductDataSource = ProductDataSourceImplementation()
-    
     func getAllProducts() async throws -> [ProductModel] {
         let productsResponse =  try await dataSource.getAllProducts()
         return productsResponse

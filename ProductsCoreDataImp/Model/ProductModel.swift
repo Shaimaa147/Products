@@ -14,21 +14,16 @@ struct ProductModel: Codable {
     var description: String?
     var images: [String]?
 
-    
     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id
         case title
         case price
         case description
         case images
-        
     }
 }
-
-    
 //    category {
 //      id
 //      name
 //      image
 //    }
-  

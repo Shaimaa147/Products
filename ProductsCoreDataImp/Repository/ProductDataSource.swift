@@ -11,11 +11,8 @@ protocol ProductDataSource {
 }
 
 class ProductDataSourceImplementation: ProductDataSource {
-    
     func getAllProducts() async throws -> [ProductModel] {
-        print("Product data source SIGNIN")
-        return try await Shared.apiManager.perform(apiRequest: ProductAPIRequest.getAll, providerType: Shared.provider, outputType: [ProductModel].self)
+        // swiftlint:disable:next line_length
+        return try await Shared.apiManager.perform(apiRequest: GetProductsAPIRequest.init(), providerType: Shared.provider, outputType: [ProductModel].self)
     }
-    
-    
 }

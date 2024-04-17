@@ -6,3 +6,21 @@
 //
 
 import Foundation
+import CoreData
+
+class GetProductsLocalDS: GetProductsLocalDSProtocol {
+    func getAllProducts() async throws -> [ProductModel] {
+        let request: NSFetchRequest<Products> = Products.fetchRequest()
+        let fetchedProducts = try Shared.context.fetch(request)
+        var localProducts: [ProductModel] = []
+        for item  in fetchedProducts {
+            var product = ProductModel()
+            product.id = Int(item.id)
+            product.title = item.title
+            product.price = Int(item.price)
+            product.description = item.description
+            localProducts.append(product)
+        }
+        return localProducts
+    }
+}

@@ -8,9 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     var productVM = ProductViewModel()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,17 +17,12 @@ class ViewController: UIViewController {
         let newView = UIView(frame: rect)
         newView.backgroundColor = .cyan
         self.view.addSubview(newView)
-        
+        print("Calling configure VM")
         configureViewModel()
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
-    
     private func configureViewModel() {
-
+        print("Calling VM")
         productVM.getAllProducts()
-
     }
-
-
 }
-
