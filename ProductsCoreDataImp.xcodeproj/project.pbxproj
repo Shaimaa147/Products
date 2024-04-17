@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6058D7D2BCF847800293A80 /* UtilityPackage in Frameworks */ = {isa = PBXBuildFile; productRef = B6058D7C2BCF847800293A80 /* UtilityPackage */; };
 		B62C05702BCF57CD00DE9EEA /* GetProductsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C056F2BCF57CD00DE9EEA /* GetProductsAPIRequest.swift */; };
 		B62C05772BCF653400DE9EEA /* GetProductsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C05762BCF653400DE9EEA /* GetProductsRepositoryProtocol.swift */; };
 		B62C05792BCF65B900DE9EEA /* GetProductsRemoteDSProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C05782BCF65B900DE9EEA /* GetProductsRemoteDSProtocol.swift */; };
@@ -16,7 +17,6 @@
 		B639A7072BBC296E001D2D1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7062BBC296E001D2D1E /* ViewController.swift */; };
 		B639A70C2BBC2970001D2D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B639A70B2BBC2970001D2D1E /* Assets.xcassets */; };
 		B639A70F2BBC2970001D2D1E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B639A70E2BBC2970001D2D1E /* Base */; };
-		B639A7182BBC29F8001D2D1E /* UtilityPackage in Frameworks */ = {isa = PBXBuildFile; productRef = B639A7172BBC29F8001D2D1E /* UtilityPackage */; };
 		B639A7202BBC2AA5001D2D1E /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A71F2BBC2AA5001D2D1E /* ProductViewModel.swift */; };
 		B639A7222BBC2AB5001D2D1E /* GetProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7212BBC2AB5001D2D1E /* GetProductsUseCase.swift */; };
 		B639A7242BBC2ADD001D2D1E /* ProductRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7232BBC2ADD001D2D1E /* ProductRemoteRepository.swift */; };
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B639A7182BBC29F8001D2D1E /* UtilityPackage in Frameworks */,
+				B6058D7D2BCF847800293A80 /* UtilityPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +234,7 @@
 			);
 			name = ProductsCoreDataImp;
 			packageProductDependencies = (
-				B639A7172BBC29F8001D2D1E /* UtilityPackage */,
+				B6058D7C2BCF847800293A80 /* UtilityPackage */,
 			);
 			productName = ProductsCoreDataImp;
 			productReference = B639A6FF2BBC296E001D2D1E /* ProductsCoreDataImp.app */;
@@ -265,7 +265,7 @@
 			);
 			mainGroup = B639A6F62BBC296E001D2D1E;
 			packageReferences = (
-				B639A7162BBC29F8001D2D1E /* XCLocalSwiftPackageReference "../../UtilityPackage" */,
+				B6058D7B2BCF847800293A80 /* XCLocalSwiftPackageReference "../../Desktop/UtilityPackage" */,
 			);
 			productRefGroup = B639A7002BBC296E001D2D1E /* Products */;
 			projectDirPath = "";
@@ -551,14 +551,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B639A7162BBC29F8001D2D1E /* XCLocalSwiftPackageReference "../../UtilityPackage" */ = {
+		B6058D7B2BCF847800293A80 /* XCLocalSwiftPackageReference "../../Desktop/UtilityPackage" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../UtilityPackage;
+			relativePath = ../../Desktop/UtilityPackage;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B639A7172BBC29F8001D2D1E /* UtilityPackage */ = {
+		B6058D7C2BCF847800293A80 /* UtilityPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UtilityPackage;
 		};
