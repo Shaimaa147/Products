@@ -12,9 +12,17 @@ class GetProductsRepository: GetProductsRepositoryProtocol {
     var localDataSource: GetProductsLocalDS = GetProductsLocalDS()
     func getAllProducts() async throws -> [ProductModel] {
         if Shared.internetManager.isInternetConnectionAvailable() {
-            return try await remoteDataSource.getAllProducts()
+            let products = try await remoteDataSource.getAllProducts()
+            //            for product in products {
+            //                try localDataSource.saveProduct(product: product)
+            //            }
+            return products
         } else {
             return try await localDataSource.getAllProducts()
         }
+    }
+    
+    func saveProduct(product: ProductModel) throws {
+        try  localDataSource.saveProduct(product: product)
     }
 }

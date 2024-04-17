@@ -11,7 +11,7 @@ import UtilityPackage
 final class ProductViewModel: ObservableObject {
     @Published var products: [ProductModel] = []
     let getProductsUsecase = GetProductsUseCase()
-    let saveProductUsecase = SaveProductUseCase()
+    let saveProductUsecase = SaveProductsUseCase()
     func getAllProducts() {
         Task {
             do {
@@ -35,5 +35,6 @@ final class ProductViewModel: ObservableObject {
         } catch {
             print("Error saving Product : \(error.localizedDescription)")
         }
+        print("products SAVED ")
     }
 }

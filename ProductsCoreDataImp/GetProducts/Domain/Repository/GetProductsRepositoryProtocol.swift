@@ -9,4 +9,11 @@ import Foundation
 
 protocol GetProductsRepositoryProtocol {
     func getAllProducts() async throws -> [ProductModel]
+    //    func saveProduct(product: ProductModel) throws
+}
+
+extension GetProductsRepositoryProtocol {
+    func saveProduct(product: ProductModel) throws {
+        
+    }
 }

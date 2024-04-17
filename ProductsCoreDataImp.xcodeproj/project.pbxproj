@@ -27,10 +27,11 @@
 		B639A7522BBC3467001D2D1E /* SharedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7512BBC3467001D2D1E /* SharedConstants.swift */; };
 		B639A7542BBC44D6001D2D1E /* ProductLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7532BBC44D6001D2D1E /* ProductLocalDataSource.swift */; };
 		B639A7562BBC483D001D2D1E /* ProductLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7552BBC483D001D2D1E /* ProductLocalRepository.swift */; };
-		B639A7582BBC4BA4001D2D1E /* SaveProductUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7572BBC4BA4001D2D1E /* SaveProductUsecase.swift */; };
+		B639A7582BBC4BA4001D2D1E /* SaveProductsUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7572BBC4BA4001D2D1E /* SaveProductsUsecase.swift */; };
 		B65A41C12BCF711A00516422 /* GetProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A41C02BCF711A00516422 /* GetProductsRepository.swift */; };
 		B65A41C32BCF714400516422 /* GetProductsRemoteDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A41C22BCF714400516422 /* GetProductsRemoteDS.swift */; };
 		B65A41C52BCF716A00516422 /* GetProductsLocalDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A41C42BCF716A00516422 /* GetProductsLocalDS.swift */; };
+		B69267522BCFA4D6005CFB4C /* UtilityPackage in Frameworks */ = {isa = PBXBuildFile; productRef = B69267512BCFA4D6005CFB4C /* UtilityPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,7 @@
 		B639A7512BBC3467001D2D1E /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
 		B639A7532BBC44D6001D2D1E /* ProductLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalDataSource.swift; sourceTree = "<group>"; };
 		B639A7552BBC483D001D2D1E /* ProductLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalRepository.swift; sourceTree = "<group>"; };
-		B639A7572BBC4BA4001D2D1E /* SaveProductUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProductUsecase.swift; sourceTree = "<group>"; };
+		B639A7572BBC4BA4001D2D1E /* SaveProductsUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveProductsUsecase.swift; sourceTree = "<group>"; };
 		B65A41C02BCF711A00516422 /* GetProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsRepository.swift; sourceTree = "<group>"; };
 		B65A41C22BCF714400516422 /* GetProductsRemoteDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsRemoteDS.swift; sourceTree = "<group>"; };
 		B65A41C42BCF716A00516422 /* GetProductsLocalDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsLocalDS.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69267522BCFA4D6005CFB4C /* UtilityPackage in Frameworks */,
 				B639A7182BBC29F8001D2D1E /* UtilityPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,7 +190,6 @@
 		B639A71C2BBC2A73001D2D1E /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
-				B639A7572BBC4BA4001D2D1E /* SaveProductUsecase.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -212,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				B639A7212BBC2AB5001D2D1E /* GetProductsUseCase.swift */,
+				B639A7572BBC4BA4001D2D1E /* SaveProductsUsecase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 			name = ProductsCoreDataImp;
 			packageProductDependencies = (
 				B639A7172BBC29F8001D2D1E /* UtilityPackage */,
+				B69267512BCFA4D6005CFB4C /* UtilityPackage */,
 			);
 			productName = ProductsCoreDataImp;
 			productReference = B639A6FF2BBC296E001D2D1E /* ProductsCoreDataImp.app */;
@@ -265,7 +268,7 @@
 			);
 			mainGroup = B639A6F62BBC296E001D2D1E;
 			packageReferences = (
-				B639A7162BBC29F8001D2D1E /* XCLocalSwiftPackageReference "../../UtilityPackage" */,
+				B69267502BCFA4D6005CFB4C /* XCLocalSwiftPackageReference "../UtilityPackage" */,
 			);
 			productRefGroup = B639A7002BBC296E001D2D1E /* Products */;
 			projectDirPath = "";
@@ -323,7 +326,7 @@
 				B639A72A2BBC2BB7001D2D1E /* ProductAPIRequest.swift in Sources */,
 				B62C05772BCF653400DE9EEA /* GetProductsRepositoryProtocol.swift in Sources */,
 				B62C05702BCF57CD00DE9EEA /* GetProductsAPIRequest.swift in Sources */,
-				B639A7582BBC4BA4001D2D1E /* SaveProductUsecase.swift in Sources */,
+				B639A7582BBC4BA4001D2D1E /* SaveProductsUsecase.swift in Sources */,
 				B639A7072BBC296E001D2D1E /* ViewController.swift in Sources */,
 				B639A7032BBC296E001D2D1E /* AppDelegate.swift in Sources */,
 				B639A7202BBC2AA5001D2D1E /* ProductViewModel.swift in Sources */,
@@ -551,14 +554,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B639A7162BBC29F8001D2D1E /* XCLocalSwiftPackageReference "../../UtilityPackage" */ = {
+		B69267502BCFA4D6005CFB4C /* XCLocalSwiftPackageReference "../UtilityPackage" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../UtilityPackage;
+			relativePath = ../UtilityPackage;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		B639A7172BBC29F8001D2D1E /* UtilityPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UtilityPackage;
+		};
+		B69267512BCFA4D6005CFB4C /* UtilityPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UtilityPackage;
 		};

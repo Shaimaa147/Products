@@ -9,4 +9,5 @@ import Foundation
 
 protocol GetProductsLocalDSProtocol: GetProductsRepositoryProtocol {
     func getAllProducts() async throws -> [ProductModel]
+    func saveProduct(product: ProductModel) throws
 }
