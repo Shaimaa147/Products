@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class GetProductsLocalDS: GetProductsLocalDSProtocol {
-    func getAllProducts() async throws -> [ProductModel] {
+    func getAllProducts() throws -> [ProductModel] {
         let request: NSFetchRequest<Products> = Products.fetchRequest()
         let fetchedProducts = try Shared.context.fetch(request)
         var localProducts: [ProductModel] = []
@@ -23,7 +23,6 @@ class GetProductsLocalDS: GetProductsLocalDSProtocol {
         }
         return localProducts
     }
-    
     func saveProduct(product: ProductModel) throws {
         print("LOCAL Product data source ")
         let newProduct = Products(context: Shared.context)
@@ -34,5 +33,3 @@ class GetProductsLocalDS: GetProductsLocalDSProtocol {
         try Shared.context.save()
     }
 }
-
-

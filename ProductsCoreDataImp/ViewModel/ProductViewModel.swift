@@ -7,34 +7,38 @@
 
 import Foundation
 import UtilityPackage
+import Factory
 
-final class ProductViewModel: ObservableObject {
-    @Published var products: [ProductModel] = []
-    let getProductsUsecase = GetProductsUseCase()
-    let saveProductUsecase = SaveProductsUseCase()
-    func getAllProducts() {
+protocol GetProductsViewModelProtocol : BaseViewModel{
+    var products : [ProductModel] { get set }
+}
+
+final class ProductViewModel: BaseViewModel {
+    @Injected(\.getProductsUseCase) private var service
+    var products: [ProductModel] = [] {
+        didSet {
+            changeHandler?(.updateDataModel)
+            //            self.bindClosureViewModelToController()
+        }
+    }
+    //    var bindClosureViewModelToController : (() -> ()) = {}
+    var changeHandler: ((BaseViewModelChange) -> Void)?
+    func startSynching() {
+        emit(.loaderStart)
         Task {
             do {
                 print("Inside ViewModel TASK")
-                products = try await getProductsUsecase.execute()
-                for product in products {
-                    print("\(String(describing: product.title!)) costs \(String(describing: product.price!))$")
-                }
+                self.products = try await service.execute()
+                //                self.emit(.updateDataModel)
             } catch {
                 // swiftlint:disable:next force_cast
                 print((error as! NetworkError).errorDescription)
+                // swiftlint:disable:next force_cast
+                self.emit(.error(message: (error as! NetworkError).errorDescription))
             }
         }
-        saveProducts()
     }
-    func saveProducts() {
-        do {
-            for product in products {
-                try saveProductUsecase.execute(product: product)
-            }
-        } catch {
-            print("Error saving Product : \(error.localizedDescription)")
-        }
-        print("products SAVED ")
+    func emit(_ change: BaseViewModelChange) {
+        changeHandler?(change)
     }
 }

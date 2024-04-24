@@ -13,10 +13,9 @@
 		B62C057B2BCF666800DE9EEA /* GetProductsLocalDSProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62C057A2BCF666800DE9EEA /* GetProductsLocalDSProtocol.swift */; };
 		B639A7032BBC296E001D2D1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7022BBC296E001D2D1E /* AppDelegate.swift */; };
 		B639A7052BBC296E001D2D1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7042BBC296E001D2D1E /* SceneDelegate.swift */; };
-		B639A7072BBC296E001D2D1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7062BBC296E001D2D1E /* ViewController.swift */; };
+		B639A7072BBC296E001D2D1E /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7062BBC296E001D2D1E /* ProductListViewController.swift */; };
 		B639A70C2BBC2970001D2D1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B639A70B2BBC2970001D2D1E /* Assets.xcassets */; };
 		B639A70F2BBC2970001D2D1E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B639A70E2BBC2970001D2D1E /* Base */; };
-		B639A7182BBC29F8001D2D1E /* UtilityPackage in Frameworks */ = {isa = PBXBuildFile; productRef = B639A7172BBC29F8001D2D1E /* UtilityPackage */; };
 		B639A7202BBC2AA5001D2D1E /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A71F2BBC2AA5001D2D1E /* ProductViewModel.swift */; };
 		B639A7222BBC2AB5001D2D1E /* GetProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7212BBC2AB5001D2D1E /* GetProductsUseCase.swift */; };
 		B639A7242BBC2ADD001D2D1E /* ProductRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639A7232BBC2ADD001D2D1E /* ProductRemoteRepository.swift */; };
@@ -31,7 +30,21 @@
 		B65A41C12BCF711A00516422 /* GetProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A41C02BCF711A00516422 /* GetProductsRepository.swift */; };
 		B65A41C32BCF714400516422 /* GetProductsRemoteDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A41C22BCF714400516422 /* GetProductsRemoteDS.swift */; };
 		B65A41C52BCF716A00516422 /* GetProductsLocalDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65A41C42BCF716A00516422 /* GetProductsLocalDS.swift */; };
-		B69267522BCFA4D6005CFB4C /* UtilityPackage in Frameworks */ = {isa = PBXBuildFile; productRef = B69267512BCFA4D6005CFB4C /* UtilityPackage */; };
+		B66676512BD8D83A00809FF3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66676502BD8D83A00809FF3 /* BaseView.swift */; };
+		B66676532BD8D84B00809FF3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66676522BD8D84B00809FF3 /* BaseViewController.swift */; };
+		B66676552BD8D85A00809FF3 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66676542BD8D85A00809FF3 /* BaseViewModel.swift */; };
+		B66676592BD8EB8500809FF3 /* ProductListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66676582BD8EB8500809FF3 /* ProductListViewController.xib */; };
+		B6AC68282BD7F6AF00B5DBB9 /* UtilityPackage in Frameworks */ = {isa = PBXBuildFile; productRef = B6AC68272BD7F6AF00B5DBB9 /* UtilityPackage */; };
+		B6AC682B2BD7F6F500B5DBB9 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = B6AC682A2BD7F6F500B5DBB9 /* Factory */; };
+		B6AC682D2BD8019F00B5DBB9 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AC682C2BD8019F00B5DBB9 /* DependencyContainer.swift */; };
+		B6C280DC2BD11CD900B756D8 /* CreateProductLocalDSProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280DB2BD11CD900B756D8 /* CreateProductLocalDSProtocol.swift */; };
+		B6C280DE2BD11D5C00B756D8 /* CreateProductRemoteDSProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280DD2BD11D5C00B756D8 /* CreateProductRemoteDSProtocol.swift */; };
+		B6C280E02BD11DEC00B756D8 /* CreateProductRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280DF2BD11DEC00B756D8 /* CreateProductRepositoryProtocol.swift */; };
+		B6C280E42BD11F1C00B756D8 /* CreateProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280E32BD11F1C00B756D8 /* CreateProductRepository.swift */; };
+		B6C280E62BD120EF00B756D8 /* CreateProductRemoteDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280E52BD120EF00B756D8 /* CreateProductRemoteDS.swift */; };
+		B6C280E82BD1219500B756D8 /* CreateProductLocalDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280E72BD1219500B756D8 /* CreateProductLocalDS.swift */; };
+		B6C280EA2BD1222A00B756D8 /* CreateProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280E92BD1222A00B756D8 /* CreateProductUseCase.swift */; };
+		B6C280EC2BD1236600B756D8 /* CreateProductsAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C280EB2BD1236600B756D8 /* CreateProductsAPIRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +55,7 @@
 		B639A6FF2BBC296E001D2D1E /* ProductsCoreDataImp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductsCoreDataImp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B639A7022BBC296E001D2D1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B639A7042BBC296E001D2D1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B639A7062BBC296E001D2D1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B639A7062BBC296E001D2D1E /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		B639A70B2BBC2970001D2D1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B639A70E2BBC2970001D2D1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B639A7102BBC2970001D2D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +73,19 @@
 		B65A41C02BCF711A00516422 /* GetProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsRepository.swift; sourceTree = "<group>"; };
 		B65A41C22BCF714400516422 /* GetProductsRemoteDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsRemoteDS.swift; sourceTree = "<group>"; };
 		B65A41C42BCF716A00516422 /* GetProductsLocalDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsLocalDS.swift; sourceTree = "<group>"; };
+		B66676502BD8D83A00809FF3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B66676522BD8D84B00809FF3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B66676542BD8D85A00809FF3 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		B66676582BD8EB8500809FF3 /* ProductListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListViewController.xib; sourceTree = "<group>"; };
+		B6AC682C2BD8019F00B5DBB9 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		B6C280DB2BD11CD900B756D8 /* CreateProductLocalDSProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductLocalDSProtocol.swift; sourceTree = "<group>"; };
+		B6C280DD2BD11D5C00B756D8 /* CreateProductRemoteDSProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductRemoteDSProtocol.swift; sourceTree = "<group>"; };
+		B6C280DF2BD11DEC00B756D8 /* CreateProductRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B6C280E32BD11F1C00B756D8 /* CreateProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductRepository.swift; sourceTree = "<group>"; };
+		B6C280E52BD120EF00B756D8 /* CreateProductRemoteDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductRemoteDS.swift; sourceTree = "<group>"; };
+		B6C280E72BD1219500B756D8 /* CreateProductLocalDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductLocalDS.swift; sourceTree = "<group>"; };
+		B6C280E92BD1222A00B756D8 /* CreateProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductUseCase.swift; sourceTree = "<group>"; };
+		B6C280EB2BD1236600B756D8 /* CreateProductsAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductsAPIRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69267522BCFA4D6005CFB4C /* UtilityPackage in Frameworks */,
-				B639A7182BBC29F8001D2D1E /* UtilityPackage in Frameworks */,
+				B6AC68282BD7F6AF00B5DBB9 /* UtilityPackage in Frameworks */,
+				B6AC682B2BD7F6F500B5DBB9 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +113,8 @@
 		B62C05722BCF62B400DE9EEA /* CreateProduct */ = {
 			isa = PBXGroup;
 			children = (
+				B6C280DA2BD11CA500B756D8 /* Data */,
+				B6C280D92BD11C9800B756D8 /* Domain */,
 			);
 			path = CreateProduct;
 			sourceTree = "<group>";
@@ -123,6 +151,8 @@
 		B639A6F62BBC296E001D2D1E = {
 			isa = PBXGroup;
 			children = (
+				B666764F2BD8D82100809FF3 /* Base */,
+				B6AC682C2BD8019F00B5DBB9 /* DependencyContainer.swift */,
 				B639A7012BBC296E001D2D1E /* ProductsCoreDataImp */,
 				B639A7002BBC296E001D2D1E /* Products */,
 			);
@@ -143,13 +173,11 @@
 				B62C05712BCF629500DE9EEA /* GetProducts */,
 				B639A71E2BBC2A84001D2D1E /* View */,
 				B639A71D2BBC2A7B001D2D1E /* ViewModel */,
-				B639A71C2BBC2A73001D2D1E /* Usecase */,
 				B639A71B2BBC2A6A001D2D1E /* Repository */,
 				B639A71A2BBC2A63001D2D1E /* Model */,
 				B639A7192BBC2A5B001D2D1E /* API */,
 				B639A7022BBC296E001D2D1E /* AppDelegate.swift */,
 				B639A7042BBC296E001D2D1E /* SceneDelegate.swift */,
-				B639A7062BBC296E001D2D1E /* ViewController.swift */,
 				B639A70B2BBC2970001D2D1E /* Assets.xcassets */,
 				B639A70D2BBC2970001D2D1E /* LaunchScreen.storyboard */,
 				B639A7102BBC2970001D2D1E /* Info.plist */,
@@ -163,6 +191,7 @@
 			children = (
 				B639A7292BBC2BB7001D2D1E /* ProductAPIRequest.swift */,
 				B62C056F2BCF57CD00DE9EEA /* GetProductsAPIRequest.swift */,
+				B6C280EB2BD1236600B756D8 /* CreateProductsAPIRequest.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -187,13 +216,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		B639A71C2BBC2A73001D2D1E /* Usecase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Usecase;
-			sourceTree = "<group>";
-		};
 		B639A71D2BBC2A7B001D2D1E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +227,8 @@
 		B639A71E2BBC2A84001D2D1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B639A7062BBC296E001D2D1E /* ProductListViewController.swift */,
+				B66676582BD8EB8500809FF3 /* ProductListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +240,53 @@
 				B639A7572BBC4BA4001D2D1E /* SaveProductsUsecase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B666764F2BD8D82100809FF3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B66676502BD8D83A00809FF3 /* BaseView.swift */,
+				B66676522BD8D84B00809FF3 /* BaseViewController.swift */,
+				B66676542BD8D85A00809FF3 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B6C280D92BD11C9800B756D8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B6C280E22BD11EDA00B756D8 /* Usecase */,
+				B6C280E12BD11EC100B756D8 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B6C280DA2BD11CA500B756D8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B6C280E32BD11F1C00B756D8 /* CreateProductRepository.swift */,
+				B6C280E52BD120EF00B756D8 /* CreateProductRemoteDS.swift */,
+				B6C280E72BD1219500B756D8 /* CreateProductLocalDS.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B6C280E12BD11EC100B756D8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B6C280DB2BD11CD900B756D8 /* CreateProductLocalDSProtocol.swift */,
+				B6C280DD2BD11D5C00B756D8 /* CreateProductRemoteDSProtocol.swift */,
+				B6C280DF2BD11DEC00B756D8 /* CreateProductRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B6C280E22BD11EDA00B756D8 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				B6C280E92BD1222A00B756D8 /* CreateProductUseCase.swift */,
+			);
+			path = Usecase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +307,8 @@
 			);
 			name = ProductsCoreDataImp;
 			packageProductDependencies = (
-				B639A7172BBC29F8001D2D1E /* UtilityPackage */,
-				B69267512BCFA4D6005CFB4C /* UtilityPackage */,
+				B6AC68272BD7F6AF00B5DBB9 /* UtilityPackage */,
+				B6AC682A2BD7F6F500B5DBB9 /* Factory */,
 			);
 			productName = ProductsCoreDataImp;
 			productReference = B639A6FF2BBC296E001D2D1E /* ProductsCoreDataImp.app */;
@@ -268,7 +339,8 @@
 			);
 			mainGroup = B639A6F62BBC296E001D2D1E;
 			packageReferences = (
-				B69267502BCFA4D6005CFB4C /* XCLocalSwiftPackageReference "../UtilityPackage" */,
+				B6AC68262BD7F6AF00B5DBB9 /* XCLocalSwiftPackageReference "../../UtilityPackage" */,
+				B6AC68292BD7F6F500B5DBB9 /* XCRemoteSwiftPackageReference "Factory" */,
 			);
 			productRefGroup = B639A7002BBC296E001D2D1E /* Products */;
 			projectDirPath = "";
@@ -285,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B639A70C2BBC2970001D2D1E /* Assets.xcassets in Resources */,
+				B66676592BD8EB8500809FF3 /* ProductListViewController.xib in Resources */,
 				B639A70F2BBC2970001D2D1E /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,27 +390,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C280EC2BD1236600B756D8 /* CreateProductsAPIRequest.swift in Sources */,
 				B639A7262BBC2B82001D2D1E /* ProductDataSource.swift in Sources */,
+				B6AC682D2BD8019F00B5DBB9 /* DependencyContainer.swift in Sources */,
 				B65A41C52BCF716A00516422 /* GetProductsLocalDS.swift in Sources */,
+				B6C280E62BD120EF00B756D8 /* CreateProductRemoteDS.swift in Sources */,
+				B6C280EA2BD1222A00B756D8 /* CreateProductUseCase.swift in Sources */,
 				B62C057B2BCF666800DE9EEA /* GetProductsLocalDSProtocol.swift in Sources */,
+				B6C280E42BD11F1C00B756D8 /* CreateProductRepository.swift in Sources */,
 				B639A7522BBC3467001D2D1E /* SharedConstants.swift in Sources */,
 				B65A41C32BCF714400516422 /* GetProductsRemoteDS.swift in Sources */,
 				B639A7562BBC483D001D2D1E /* ProductLocalRepository.swift in Sources */,
+				B6C280DC2BD11CD900B756D8 /* CreateProductLocalDSProtocol.swift in Sources */,
+				B6C280E82BD1219500B756D8 /* CreateProductLocalDS.swift in Sources */,
+				B66676532BD8D84B00809FF3 /* BaseViewController.swift in Sources */,
 				B639A72A2BBC2BB7001D2D1E /* ProductAPIRequest.swift in Sources */,
 				B62C05772BCF653400DE9EEA /* GetProductsRepositoryProtocol.swift in Sources */,
 				B62C05702BCF57CD00DE9EEA /* GetProductsAPIRequest.swift in Sources */,
 				B639A7582BBC4BA4001D2D1E /* SaveProductsUsecase.swift in Sources */,
-				B639A7072BBC296E001D2D1E /* ViewController.swift in Sources */,
+				B639A7072BBC296E001D2D1E /* ProductListViewController.swift in Sources */,
 				B639A7032BBC296E001D2D1E /* AppDelegate.swift in Sources */,
 				B639A7202BBC2AA5001D2D1E /* ProductViewModel.swift in Sources */,
+				B66676512BD8D83A00809FF3 /* BaseView.swift in Sources */,
 				B639A7222BBC2AB5001D2D1E /* GetProductsUseCase.swift in Sources */,
+				B66676552BD8D85A00809FF3 /* BaseViewModel.swift in Sources */,
 				B639A7052BBC296E001D2D1E /* SceneDelegate.swift in Sources */,
 				B62C05792BCF65B900DE9EEA /* GetProductsRemoteDSProtocol.swift in Sources */,
+				B6C280DE2BD11D5C00B756D8 /* CreateProductRemoteDSProtocol.swift in Sources */,
 				B639A7242BBC2ADD001D2D1E /* ProductRemoteRepository.swift in Sources */,
 				B639A7282BBC2B9E001D2D1E /* ProductModel.swift in Sources */,
 				B65A41C12BCF711A00516422 /* GetProductsRepository.swift in Sources */,
 				B639A7542BBC44D6001D2D1E /* ProductLocalDataSource.swift in Sources */,
 				B639A72D2BBC2F72001D2D1E /* ProductsDataModel.xcdatamodeld in Sources */,
+				B6C280E02BD11DEC00B756D8 /* CreateProductRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,20 +639,32 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		B69267502BCFA4D6005CFB4C /* XCLocalSwiftPackageReference "../UtilityPackage" */ = {
+		B6AC68262BD7F6AF00B5DBB9 /* XCLocalSwiftPackageReference "../../UtilityPackage" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../UtilityPackage;
+			relativePath = ../../UtilityPackage;
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		B6AC68292BD7F6F500B5DBB9 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		B639A7172BBC29F8001D2D1E /* UtilityPackage */ = {
+		B6AC68272BD7F6AF00B5DBB9 /* UtilityPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UtilityPackage;
 		};
-		B69267512BCFA4D6005CFB4C /* UtilityPackage */ = {
+		B6AC682A2BD7F6F500B5DBB9 /* Factory */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = UtilityPackage;
+			package = B6AC68292BD7F6F500B5DBB9 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -6,11 +6,16 @@
 //
 
 import Foundation
+import Factory
 
 class GetProductsUseCase {
-    var repo: GetProductsRepositoryProtocol = GetProductsRepository()
+    @Injected(\.getProductsRepository) private var repo
+//    var repo: GetProductsRepositoryProtocol = GetProductsRepository()
     func execute() async throws -> [ProductModel] {
         let recievedProducts = try await repo.getAllProducts()
+        for product in recievedProducts {
+            try repo.saveProduct(product: product)
+        }
         return recievedProducts
     }
 }

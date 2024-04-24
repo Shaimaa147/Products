@@ -14,6 +14,5 @@ protocol GetProductsRepositoryProtocol {
 
 extension GetProductsRepositoryProtocol {
     func saveProduct(product: ProductModel) throws {
-        
     }
 }

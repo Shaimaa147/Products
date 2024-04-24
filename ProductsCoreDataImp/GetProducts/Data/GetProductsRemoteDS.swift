@@ -9,7 +9,10 @@ import Foundation
 
 class GetProductsRemoteDS: GetProductsRemoteDSProtocol {
     func getAllProducts() async throws -> [ProductModel] {
-        // swiftlint:disable:next line_length
-        return try await Shared.apiManager.perform(apiRequest: GetProductsAPIRequest.init(), providerType: Shared.provider, outputType: [ProductModel].self)
+        return try await Shared.apiManager.perform(
+            apiRequest: GetProductsAPIRequest.init(),
+            providerType: Shared.provider,
+            outputType: [ProductModel].self
+        )
     }
 }
